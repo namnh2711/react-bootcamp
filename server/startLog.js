@@ -1,5 +1,4 @@
 import colors from 'colors';
 
-/* eslint-disable-nextline */
-
+// eslint-disable-next-line
 console.log('Server is starting in dev mode...'.green);

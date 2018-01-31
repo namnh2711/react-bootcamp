@@ -8,7 +8,12 @@
   "license": "MIT",
   "scripts": {
     "prestart": "babel-node server/startLog.js",
-    "start": "babel-node server/server.js"
+    "start": "npm-run-all --parallel open:src lint:watch test:watch",
+    "open:src": "babel-node server/server.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src server",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress server/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
     "babel-polyfill": "6.8.0",
