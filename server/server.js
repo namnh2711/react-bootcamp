@@ -10,7 +10,7 @@ const compiler = webpack(config);
 const middleware = require('webpack-dev-middleware');
 
 app.use(middleware(compiler, {
-    // noInfo: true,
+    noInfo: true,
     publicPath: config.output.publicPath
 }));
 

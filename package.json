@@ -7,6 +7,7 @@
   "author": "Nam Nguyen Hoang <nhnam2@cmc.com.vn>",
   "license": "MIT",
   "scripts": {
+    "prestart": "babel-node server/startLog.js",
     "start": "babel-node server/server.js"
   },
   "dependencies": {
@@ -32,7 +33,7 @@
     "babel-preset-react-hmre": "1.1.1",
     "babel-register": "6.8.0",
     "cheerio": "0.22.0",
-    "colors": "1.1.2",
+    "colors": "^1.1.2",
     "compression": "1.6.1",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
